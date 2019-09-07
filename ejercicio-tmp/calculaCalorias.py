@@ -1,3 +1,6 @@
+def calculaCalorias(): 
+
+
 bandera = True
 
 while bandera:
@@ -14,26 +17,18 @@ while bandera:
                 print("El valor que ingresaste como ALTURA es incorrecto.")
             else:
                 actividad = input("Ingresa tu nivel de actividad (Ingrese 'A' para alto, 'M' para medio y 'B' para bajo):    ").upper()
-                if actividad == "A":
-                    actividad = "Alta"
-                elif actividad == "M":
-                    actividad = "Media"
-                elif actividad == "B":
-                    actividad = "Baja"
-                else: 
-                    print("Haz ingresado un nivel de actividad inválido")
-                genero = input("Ingrese su género: (Ingrese 'M' para másculino 'F' para femenino) ").upper()
-                if genero == "M":
-                    genero = "Masculino"
-                elif genero == "F":
-                    genero = "Femenino"
-                else: 
-                    print("Has ingresado un género inválido")
-                entrada = input("Ingrese el número de días que ejercita a la semana:  ").upper()
-                dias = int(entrada)
-                if (dias > 7) or (dias < 1) or (dias == None):
-                    print("El valor que ingresaste como días de actividad es incorrecto.")
-                else: 
-                    print("Corre función")
+                if actividad != "A" or actividad != "M" or actividad != "B":
+                    print("Haz ingresado un nivel de actividad invalido")
+                else:
+                    genero = input("Ingrese su género: (Ingrese 'M' para másculino 'F' para femenino) ").upper()
+                    if genero != "M" or genero != "F":
+                        print("Has ingresado un género invalido")
+                    else:
+                        entrada = input("Ingrese el número de días que ejercita a la semana:  ").upper()
+                        dias = int(entrada)
+                        if (dias > 7) or (dias < 1) or (dias == None):
+                            print("El valor que ingresaste como días de actividad es incorrecto.")
+                        else: 
+                            print("Corre función")
     except ValueError:
             print("Dato ingresado no es valido")
